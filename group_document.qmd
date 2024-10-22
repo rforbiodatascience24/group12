@@ -20,15 +20,9 @@ hej igen \<3 i er søde
 
 Hej mit navn er Cecille. I er søde alle sammen!
 
-<<<<<<< HEAD
-`{r} #code uden nogen code, men det er en chunk}`
-
-`{r} (203556+203542+204570+205803+194692)/5}`
-=======
 ```{r}
 #code uden nogen code, men det er en chunk
 ```
->>>>>>> 797eb6cdce76c10e50cfa74927eb91fcbb1a44e7
 
 ```{r}
 (203556+203542+204570+205803+194692)/5
