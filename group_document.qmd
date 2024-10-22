@@ -14,22 +14,27 @@ x <- c("s203556", "s203542", "s204570", "s194692", "s205803")
 
 ### New feature
 
-hej igen \<3
+hej igen \<3 i er søde
 
 ## s203542
 
 Hej mit navn er Cecille. I er søde alle sammen!
 
-`{r} #code uden nogen code, men det er en chunk}`
-
-`{r} (203556+203542+204570+205803+194692)/5}`
-
-### New feature
-
-hello new feature is cool!
+```{r}
+#code uden nogen code, men det er en chunk}
+```
 
 ```{r}
-#chunk of code is wild!
+(203556+203542+204570+205803+194692)/5
+
+```
+
+```{r}
+#code uden nogen code, men det er en chunk
+```
+
+```{r}
+(203556+203542+204570+205803+194692)/5
 ```
 
 ## s204570
@@ -38,14 +43,6 @@ hej
 
 ```{r}
 2+2
-```
-
-#### et eller sejt
-
-idk bla bla
-
-```{r}
-4+4
 ```
 
 ## s205803
@@ -58,14 +55,6 @@ Fem flade flødeboller på et *flot* fladt flødebollefad
 
 ```{r}
 203556+203542+204570+205803+194692
-```
-
-### New feature
-
-```{r}
-freli <- "Freja Elisabeth Klippmann"
-
-print(freli)
 ```
 
 ## s194692
@@ -84,13 +73,4 @@ lalala
 # more code
 x <- "hey"
 print(x)
-```
-
-#### New feature/analysis
-
-even more text
-
-```{r}
-y <- "HEY!"
-print(y)
 ```
