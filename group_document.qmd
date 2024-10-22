@@ -6,6 +6,12 @@ editor: visual
 
 ## s203556
 
+hej søde piger \<3
+
+```{r}
+x <- c("s203556", "s203542", "s204570", "s194692", "s205803")
+```
+
 ## s203542
 
 Hej mit navn er Cecille. I er søde alle sammen!
@@ -22,4 +28,30 @@ Hej mit navn er Cecille. I er søde alle sammen!
 
 ## s205803
 
+Fem flade flødeboller på et *flot* fladt flødebollefad
+
+```{r}
+5^5
+```
+
+```{r}
+203556+203542+204570+205803+194692
+```
+
 ## s194692
+
+Hey hey, Agnes here, adding some text
+
+and some code...
+
+```{r}
+Agnes <- c(185, 22, 12, 1999)
+```
+
+lalala
+
+```{r}
+# more code
+x <- "hey"
+print(x)
+```
