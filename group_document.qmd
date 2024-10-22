@@ -20,12 +20,18 @@ hej igen \<3
 
 Hej mit navn er Cecille. I er søde alle sammen!
 
-```{r}
-#code uden nogen code, men det er en chunk
+```{r} #code uden nogen code, men det er en chunk}
 ```
 
+```{r} (203556+203542+204570+205803+194692)/5}
+```
+
+### New feature
+
+hello new feature is cool!
+
 ```{r}
-(203556+203542+204570+205803+194692)/5
+#chunk of code is wild!
 ```
 
 ## s204570
