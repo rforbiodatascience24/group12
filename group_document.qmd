@@ -12,6 +12,10 @@ hej søde piger \<3
 x <- c("s203556", "s203542", "s204570", "s194692", "s205803")
 ```
 
+### New feature
+
+hej igen \<3 i er søde
+
 ## s203542
 
 Hej mit navn er Cecille. I er søde alle sammen!
