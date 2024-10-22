@@ -23,3 +23,19 @@ Fem flade flødeboller på et *flot* fladt flødebollefad
 ```
 
 ## s194692
+
+Hey hey, Agnes here, adding some text
+
+and some code...
+
+```{r}
+Agnes <- c(185, 22, 12, 1999)
+```
+
+lalala
+
+```{r}
+# more code
+x <- "hey"
+print(x)
+```
