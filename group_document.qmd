@@ -18,20 +18,6 @@ x <- c("s203556", "s203542", "s204570", "s194692", "s205803")
 
 Hej mit navn er Cecille. I er søde alle sammen!
 
-### New feature
-
-hello new feature is cool!
-
-```{r}
-#code uden nogen code, men det er en chunk
-```
-
-### New feature
-
-```{r}
-#chunk of code is wild!
-```
-
 ## s204570
 
 hej
