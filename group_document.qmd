@@ -42,6 +42,14 @@ hej
 2+2
 ```
 
+#### et eller sejt
+
+idk bla bla
+
+```{r}
+4+4
+```
+
 ## s205803
 
 Fem flade flødeboller på et *flot* fladt flødebollefad
