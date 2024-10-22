@@ -11,6 +11,8 @@ Necessary Packages
 
 ```{r}
 library("tidyverse")
+library(broom)  # devtools::install_github("tidymodels/broom")
+library(cowplot)
 ```
 
 #### Load data (Agnes)
@@ -70,4 +72,28 @@ ggplot(cancer_data,
   theme(legend.position="bottom")
 ```
 
-#### Plotting the data (Cecille og Mille)
+#### Plotting the data as a PCA (Cecille og Mille)
+
+```{r}
+pca_fit <- cancer_data |>
+  select(where(is.numeric)) |>
+  prcomp(scale = TRUE) 
+```
+
+```{r}
+pca_fit <- cancer_data %>% 
+  select(where(is.numeric)) %>% # retain only numeric columns
+  scale() %>% # scale data
+  prcomp() # do PCA
+```
+
+```{r}
+pca_fit |>
+  augment(cancer_data) |> # add original dataset back in
+  ggplot(aes(.fittedPC1, .fittedPC2, color = event_label)) + 
+  geom_point(size = 1.5) +
+  scale_color_manual(
+    values = c(good = "#D55E00", poor = "#0072B2")
+  ) +
+  theme_half_open(12) + background_grid()
+```
