@@ -1,23 +1,29 @@
 ---
 title: "Micro-Report_Lecture7"
-author: "Group12"
+author: "Group12 - s203556, s203541, s205803, s204570, s194692"
 format: html
 editor: visual
 ---
 
 ## Micro report
 
-Necessary Packages
+#### Loading necessary Packages
 
 ```{r}
+
+#| echo: true
+#| eval: true
 library("tidyverse")
-library(broom)  # devtools::install_github("tidymodels/broom")
+library(broom)
 library(cowplot)
 ```
 
-#### Load data (Agnes)
+#### Load data
 
 ```{r}
+#| echo: true
+#| eval: true
+
 target_url <- "https://github.com/ramhiser/datamicroarray/raw/master/data/gravier.RData"
 output_file <- "data/gravier.RData"
 curl::curl_download(url = target_url,
@@ -27,10 +33,12 @@ load("data/gravier.RData")
 
 ```
 
-Wrangle data:
+#### Wrangle data
 
 ```{r}
-
+#| echo: true
+#| eval: true
+#| 
 set.seed(676571)
 cancer_data=mutate(as_tibble(pluck(gravier,"x")),y=pluck(gravier,"y"),pt_id=1:length(pluck(gravier, "y")),age=round(rnorm(length(pluck(gravier,"y")),mean=55,sd=10),1))
 cancer_data=rename(cancer_data,event_label=y)
@@ -38,23 +46,32 @@ cancer_data$age_group=cut(cancer_data$age,breaks=seq(10,100,by=10))
 cancer_data=relocate(cancer_data,c(pt_id,age,age_group,pt_id,event_label))
 ```
 
-#### Data handling (Julie og Freja)
+#### Fun plots
 
-Boxplot:
+Boxplot
 
 ```{r}
+#| echo: true
+#| eval: true
+
 ggplot(cancer_data, aes(age_group,g2E09))+geom_boxplot()
 ```
 
-Favorite gene boxplot:
+#### Favorite gene boxplot
 
 ```{r}
+#| echo: true
+#| eval: true
+
 ggplot(cancer_data, aes(age_group,g2E09, color=event_label))+geom_boxplot(alpha=0.7) + labs(title="Boxplots of expression level of our favorite gene", x="Age Group",y="Gen: g2E09", color= "Event Label")
 ```
 
-Very cool plot:
+#### Very cool plot
 
 ```{r}
+#| echo: true
+#| eval: true
+
 ggplot(cancer_data, 
        aes(age,
            g1int239, 
@@ -72,22 +89,38 @@ ggplot(cancer_data,
   theme(legend.position="bottom")
 ```
 
-#### Plotting the data as a PCA (Cecille og Mille)
+#### Plotting the data as a PCA
+
+Fitting the PCA
 
 ```{r}
+#| echo: true
+#| eval: true
+
 pca_fit <- cancer_data |>
   select(where(is.numeric)) |>
   prcomp(scale = TRUE) 
 ```
 
+Alternative strategy
+
 ```{r}
+#| echo: true
+#| eval: true
+
+
 pca_fit <- cancer_data %>% 
   select(where(is.numeric)) %>% # retain only numeric columns
   scale() %>% # scale data
   prcomp() # do PCA
 ```
 
+#### PCA plot
+
 ```{r}
+#| echo: true
+#| eval: true
+
 pca_fit |>
   augment(cancer_data) |> # add original dataset back in
   ggplot(aes(.fittedPC1, .fittedPC2, color = event_label)) + 
