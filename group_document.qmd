@@ -14,21 +14,9 @@ x <- c("s203556", "s203542", "s204570", "s194692", "s205803")
 
 ### New feature
 
-<<<<<<< HEAD
-hej igen \<3 i er søde
-=======
-hej igen \<3
->>>>>>> e5cbe1c1899b3cd92ef386d69a233c4d822fca8b
-
 ## s203542
 
 Hej mit navn er Cecille. I er søde alle sammen!
-
-```{r} #code uden nogen code, men det er en chunk}
-```
-
-```{r} (203556+203542+204570+205803+194692)/5}
-```
 
 ### New feature
 
