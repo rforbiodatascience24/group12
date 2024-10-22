@@ -6,3 +6,9 @@ editor: visual
 ---
 
 ## Micro report
+
+#### Load data (Agens)
+
+#### Data handling (Julie og Freja)
+
+#### Plotting the data (Cecille og Mille)
