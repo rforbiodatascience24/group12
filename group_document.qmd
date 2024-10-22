@@ -54,6 +54,14 @@ Fem flade flødeboller på et *flot* fladt flødebollefad
 203556+203542+204570+205803+194692
 ```
 
+### New feature
+
+```{r}
+freli <- "Freja Elisabeth Klippmann"
+
+print(freli)
+```
+
 ## s194692
 
 Hey hey, Agnes here, adding some text
