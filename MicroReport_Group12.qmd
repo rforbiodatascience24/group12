@@ -1,0 +1,8 @@
+---
+title: "Micro-Report_Lecture7"
+author: "Group12"
+format: html
+editor: visual
+---
+
+## Micro report
