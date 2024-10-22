@@ -38,4 +38,36 @@ cancer_data=relocate(cancer_data,c(pt_id,age,age_group,pt_id,event_label))
 
 #### Data handling (Julie og Freja)
 
+Boxplot:
+
+```{r}
+ggplot(cancer_data, aes(age_group,g2E09))+geom_boxplot()
+```
+
+Favorite gene boxplot:
+
+```{r}
+ggplot(cancer_data, aes(age_group,g2E09, color=event_label))+geom_boxplot(alpha=0.7) + labs(title="Boxplots of expression level of our favorite gene", x="Age Group",y="Gen: g2E09", color= "Event Label")
+```
+
+Very cool plot:
+
+```{r}
+ggplot(cancer_data, 
+       aes(age,
+           g1int239, 
+           color=event_label))+
+  geom_point(shape=21,
+             stroke=0.5,
+             aes(fill=event_label),color="black") + 
+  geom_smooth(method = "lm", level=0)+ 
+  labs(title="A prognostic DNA signature for T1T2 node-negative breast cancer patients", 
+       subtitle="Stratified on labelling: good= no event, poor = early metastasis", 
+       x= "Expression level of g1CNS507 (log2 transformed",
+       y="Event After Diagnosis", caption="Data from Gravier", 
+       color="Label", 
+       fill="Label")+
+  theme(legend.position="bottom")
+```
+
 #### Plotting the data (Cecille og Mille)
